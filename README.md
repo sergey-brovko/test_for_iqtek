@@ -63,11 +63,19 @@ uvicorn src.main:app --reload
 - Swagger UI: http://localhost:8000/docs
 - Redoc: http://localhost:8000/redoc
 
+## Запуск тестирования
+
+Для запуска тестирования репозиториев:
+```bash
+cd tests
+pytest -v       
+```
+
 ## Примеры запросов
 
 Создать пользователя:
 ```bash
-curl -X POST "http://localhost:8000/user/" \
+curl -X POST "http://localhost:8000/user" \
 -H "Content-Type: application/json" \
 -d '{"full_name": "John Doe"}'
 ```
@@ -125,6 +133,7 @@ docker-compose up postgres_db --build
 ```
 test_for_iqtek/
 ├── src/                 # Основной код приложения
+├── tests/               # Тесты
 ├── config.yaml          # Конфигурация
 ├── Dockerfile           # Конфигурация Docker
 ├── docker-compose.yaml 
