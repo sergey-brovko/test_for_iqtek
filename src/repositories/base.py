@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from src.schemas import User, UserRepository
+from src.schemas.users import User, UserRepository
 
 
 class Repository(ABC):
@@ -12,9 +12,9 @@ class Repository(ABC):
         pass
 
     @abstractmethod
-    async def delete_user(self, user_id: int) -> None:
+    async def delete_user(self, user_id: int) -> bool:
         pass
 
     @abstractmethod
-    async def update_user(self, user_id: int, user: User) -> None:
+    async def update_user(self, user_id: int, user: User) -> bool:
         pass

@@ -2,9 +2,9 @@ from sqlalchemy import delete, update
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.future import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from src.models import DBUser
+from src.models.users import DBUser
 from src.repositories.base import Repository
-from src.schemas import UserRepository, User
+from src.schemas.users import UserRepository, User
 
 
 class DatabaseRepository(Repository):

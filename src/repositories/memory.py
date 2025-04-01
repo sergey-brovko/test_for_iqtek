@@ -1,5 +1,5 @@
 from src.repositories.base import Repository
-from src.schemas import UserRepository, User
+from src.schemas.users import UserRepository, User
 
 
 class MemoryRepository(Repository):

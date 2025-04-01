@@ -4,13 +4,13 @@ from contextlib import asynccontextmanager
 from src.config import settings
 from src.dependencies import get_repository
 from src.repositories.base import Repository
-from src.schemas import UserRepository, User
+from src.schemas.users import UserRepository, User
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     if settings.repository_type == "sql":
-        from src.database import create_tables
+        from src.database.session import create_tables
         await create_tables()
     yield
 
