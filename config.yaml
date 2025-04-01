@@ -1,0 +1,9 @@
+repository:
+  repository_type: "sql"  # "memory" or "sql"
+  database:
+    driver: "postgresql+asyncpg"
+    host: "postgres_db"
+    port: 5432
+    user: "root"
+    password: "MyPassword"
+    name: "mydb"

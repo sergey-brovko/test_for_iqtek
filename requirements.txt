@@ -1,0 +1,7 @@
+SQLAlchemy~=2.0.38
+fastapi~=0.115.8
+uvicorn
+asyncpg
+PyYAML~=6.0.2
+pydantic-settings~=2.8.1
+pydantic~=2.11.1
